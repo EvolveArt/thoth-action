@@ -20,6 +20,7 @@ install_thoth()
     export PATH="/opt/thoth/bin:$PATH"
     # pip3 install wheel
     git clone https://github.com/FuzzingLabs/thoth && cd thoth
+    pip install requests
     pip install .
 }
 
