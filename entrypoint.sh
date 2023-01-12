@@ -20,7 +20,7 @@ install_thoth()
     export PATH="/opt/thoth/bin:$PATH"
     # pip3 install wheel
     git clone https://github.com/FuzzingLabs/thoth && cd thoth
-    pip3 install .
+    pip install .
 }
 
 install_graphviz()
@@ -31,8 +31,8 @@ install_graphviz()
     fi
 }
 
-install_thoth
 install_graphviz
+install_thoth
 
 # compile all cairo files in $TARGET using starknet-compile
 if [[ -d "$TARGET" ]]; then
