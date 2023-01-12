@@ -1,0 +1,15 @@
+name: "thoth-action"
+description: "Runs Thoth, the Cairo/Starknet bytecode analyzer, disassembler and decompiler."
+inputs:
+  target:
+    description: "The path of the project that Thoth should analyze, relative to the repo root."
+    default: .
+    type: string
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.target }}
+branding:
+  icon: "shield"
+  color: "red"
