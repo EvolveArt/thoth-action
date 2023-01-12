@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: fuzzinglabs/thoth-action@v0.1.0
+      - uses: EvolveArt/thoth-action@v0.1.2
 ```
 
 ## Options
@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Thoth
-        uses: fuzzinglabs/thoth-action@v0.1.0
+        uses: EvolveArt/thoth-action@v0.1.2
         id: thoth
         continue-on-error: true
         with:
