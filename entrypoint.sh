@@ -15,7 +15,7 @@ install_thoth()
     #     THOTHPKG="thoth==$THOTHVER"
     #     echo "[-] THOTHVER provided, installing $THOTHPKG"
     # fi
-
+    apt-get update && apt-get install -y graphviz
     python3 -m venv /opt/thoth
     export PATH="/opt/thoth/bin:$PATH"
     # pip3 install wheel
@@ -23,15 +23,6 @@ install_thoth()
     pip install .
 }
 
-install_graphviz()
-{
-    if [[ -n "$GRAPHVIZ" ]]; then
-        echo "[-] GRAPHVIZ provided, installing graphviz"
-        apt-get update && apt-get install -y graphviz
-    fi
-}
-
-install_graphviz
 install_thoth
 
 # compile all cairo files in $TARGET using starknet-compile
