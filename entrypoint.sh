@@ -18,7 +18,7 @@ install_thoth()
 
     python3 -m venv /opt/thoth
     export PATH="/opt/thoth/bin:$PATH"
-    pip3 install wheel
+    # pip3 install wheel
     git clone https://github.com/FuzzingLabs/thoth && cd thoth
     pip3 install .
 }

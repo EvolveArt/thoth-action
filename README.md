@@ -13,7 +13,7 @@ its [GitHub repository](https://github.com/FuzzingLabs/thoth).
 
 # How to use
 
-Create `.github/workflows/amarna.yml`:
+Create `.github/workflows/thoth.yml`:
 
 ```yaml
 name: Thoth Analysis
@@ -57,5 +57,4 @@ jobs:
 
 Here:
 
-- `continue-on-error: true` is required to let the SARIF upload step runs if Amarna finds issues
 - `target: 'src/'` means Thoth will analyze the `src/` directory
